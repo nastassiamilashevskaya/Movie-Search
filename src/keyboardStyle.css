@@ -1,0 +1,122 @@
+html {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.textarea {
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  width: 50%;
+  resize: none;
+  height: 270px;
+  font-size: 1rem;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.keyboard {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  background-color: #170335;
+  opacity: 0.95;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  transition: bottom 0.4s;
+}
+.keyboard--hidden {
+  bottom: -100%;
+}
+.keyboard__keys {
+  text-align: center;
+}
+.keyboard__key {
+  height: 45px;
+  max-width: 90px;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.1rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  position: relative;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.25s, background-color 0.25s, color 0.25s;
+}
+
+@media (max-width: 855px) {
+  .keyboard__key {
+    font-size: 0.8rem;
+    height: 34px;
+  }
+}
+
+@media (max-width: 556px) {
+  .keyboard__key {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 406px) {
+  .keyboard__key {
+    height: 28px;
+  }
+}
+
+.keyboard__key:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.keyboard__key:active, .keyboard__key--active{
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.keyboard__key--short {
+  width: 4.5%;
+}
+.keyboard__key--wide {
+  width: 9%;
+}
+.keyboard__key--extra-wide {
+  width: 34.5%;
+  max-width: 500px;
+}
+.keyboard__key--activatable::after {
+  content: '';
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+.keyboard__key--active-caps::after {
+  background: rgba(0, 255, 128, 1);
+}
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
+.line {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.infoText {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  z-index: 1;
+}

@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: 4rem;
+    background-color: $header-color;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 240px $header-color;
+}
+
+.app__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $header-text-color;
+    text-align: center;
+}

@@ -1,0 +1,65 @@
+.movie-card {
+    border: none;
+    padding: 1rem;
+    height: 29.2rem;
+    width: 13.3rem;
+}
+
+.card-title, .card-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+
+    p {
+        margin-bottom: 0.3rem;
+    }
+}
+
+.card-text-container {
+    display: inline-flex;
+}
+
+.card-body {
+    padding: 0;
+    padding-top: 1rem;
+    width: 11.4rem;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.row {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.poster {
+    width: 11.4rem;
+    height: 16.8rem;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transition: box-shadow 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 17px rgba(0,0,0,0.7);
+    }
+}
+
+.star-rating {
+    width: 1.9rem;
+    position: relative;
+    top: -8px;
+}
+
+.card-title__inner {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s linear;
+
+    &:hover {
+        text-decoration: none;
+        color: #280755;
+    }
+}

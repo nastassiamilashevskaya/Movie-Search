@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>MovieSearch</title>
+</head>
+<body>
+    <div id="preloader" class="preloader">
+        <div class="preloader__row">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+      </div>
+    <header class="header">
+        <div class="container">
+            <h1 class="app__title">MovieSearch</h1>
+        </div>
+    </header>
+    <div class="search">
+        <div class="container">
+            <div class="search__container">
+                <input x-webkit-speech id="search-field" class="search__input" type="text" maxlength="100" placeholder="Search movie">
+                <label for="search-input" style="position: absolute;">
+                    <div id="magnifer" class="magnifer">
+                        <button id="reset-button" style="opacity: 0;" type="reset">&times;</button>
+                    </div>
+                    <img id="keyboard-img" class="keyboard-img" src="assets/keyboard.png" alt="">    
+                </label>
+                <input type="checkbox" id="speaker"></input>
+                <label for="speaker" class="background">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                       width="50px" height="50px" viewBox="0 0 475.085 475.085" xml:space="preserve" class="microphone">
+                  <g>
+                      <g>
+                          <path d="M237.541,328.897c25.128,0,46.632-8.946,64.523-26.83c17.888-17.884,26.833-39.399,26.833-64.525V91.365
+                              c0-25.126-8.938-46.632-26.833-64.525C284.173,8.951,262.669,0,237.541,0c-25.125,0-46.632,8.951-64.524,26.84
+                              c-17.893,17.89-26.838,39.399-26.838,64.525v146.177c0,25.125,8.949,46.641,26.838,64.525
+                              C190.906,319.951,212.416,328.897,237.541,328.897z"/>
+                          <path d="M396.563,188.15c-3.606-3.617-7.898-5.426-12.847-5.426c-4.944,0-9.226,1.809-12.847,5.426
+                              c-3.613,3.616-5.421,7.898-5.421,12.845v36.547c0,35.214-12.518,65.333-37.548,90.362c-25.022,25.03-55.145,37.545-90.36,37.545
+                              c-35.214,0-65.334-12.515-90.365-37.545c-25.028-25.022-37.541-55.147-37.541-90.362v-36.547c0-4.947-1.809-9.229-5.424-12.845
+                              c-3.617-3.617-7.895-5.426-12.847-5.426c-4.952,0-9.235,1.809-12.85,5.426c-3.618,3.616-5.426,7.898-5.426,12.845v36.547
+                              c0,42.065,14.04,78.659,42.112,109.776c28.073,31.118,62.762,48.961,104.068,53.526v37.691h-73.089
+                              c-4.949,0-9.231,1.811-12.847,5.428c-3.617,3.614-5.426,7.898-5.426,12.847c0,4.941,1.809,9.233,5.426,12.847
+                              c3.616,3.614,7.898,5.428,12.847,5.428h182.719c4.948,0,9.236-1.813,12.847-5.428c3.621-3.613,5.431-7.905,5.431-12.847
+                              c0-4.948-1.81-9.232-5.431-12.847c-3.61-3.617-7.898-5.428-12.847-5.428h-73.08v-37.691
+                              c41.299-4.565,75.985-22.408,104.061-53.526c28.076-31.117,42.12-67.711,42.12-109.776v-36.547
+                              C401.998,196.049,400.185,191.77,396.563,188.15z"/>
+                      </g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  </svg>
+                    <svg width="100px" height="100px" viewBox="0 0 100 100">
+                      <circle class="circle" cx="50" cy="50" r="46"/>
+                      <circle class="microloader" cx="50" cy="50" r="46"/>
+                    </svg>
+                    <div class="dotWrapper">
+                      <div class="dot dot-1"></div>
+                      <div class="dot dot-2"></div>
+                      <div class="dot dot-3"></div>
+                    </div>      
+            </div>
+            <div id="errors-container" class="errors-container"></div>
+        </div>
+    </div>
+    <section class="movies">
+        <div class="container">
+            <div class="swiper-button-next" style="color: #3f0d87; top: 55%;"></div>
+            <div class="swiper-button-prev" style="color: #3f0d87; top: 55%;"></div>    
+            <div class="swiper-container">
+                <div id="swiper-wrapper" class="swiper-wrapper">
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>            
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="school-title">RS School 2020q1</div>
+                <div class="my-github">
+                    <img class="my-github__img" src="https://img.icons8.com/nolan/64/github.png"/>
+                    <a class="my-github__link" href="https://github.com/nastassiamilashevskaya">nastassiamilashevskaya</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+#speaker {
+    display: none;
+}
+  
+.background {
+    position: relative;
+    top: -2.9rem;
+    left: 90.7%;
+    background: linear-gradient(to bottom, #9e72d4 0%, $header-color 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media (max-width: 992px) {
+        left: 89%;    
+    }
+
+    @media (max-width: 768px) {
+        left: 83.5%;    
+    }
+    
+    @media (max-width: 576px) {
+        left: 81.5%;    
+    }
+    @media (max-width: 480px) {
+        left: 79.5%;    
+    }
+
+    @media (max-width: 400px) {
+        left: 77.5%;    
+    }
+
+    @media (max-width: 350px) {
+        left: 75.5%;    
+    }
+
+    .signature {
+      position: absolute;
+      bottom: -25px;
+      font-style: italic;
+      font-size: 12px;
+      color: #212121;
+      text-transform: none;
+    }
+  
+    .circle {
+      fill: none;
+      stroke-width: 3;
+      stroke-opacity: 0.5;
+    }
+  
+    .microloader {
+      fill: none;
+      stroke: white;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 0;
+      transform-origin: center;
+    }
+  
+    .microphone {
+      position: absolute;
+      fill: white;
+      height: 1.6rem;
+      width: auto;
+    }
+  
+    .dotWrapper {
+      opacity: 0;
+      position: absolute;
+      width: 2rem;
+      height: 10px;
+  
+      .dot {
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        height: 8px;
+        width: 8px;
+      }
+  
+      .dot-1 {
+        right: 1px;
+      }
+  
+      .dot-3 {
+        right: 12px;
+      }
+    }
+}
+  
+#speaker:checked {
+    &~.background {
+      .microloader {
+        animation: line 5s linear infinite, spin 10s linear infinite;
+        stroke-dasharray: 280;
+      }
+  
+      .microphone {
+        animation: microphone 0.5s ease-in-out both;
+      }
+  
+      .dotWrapper {
+        opacity: 1;
+        animation: dots 1s ease-in-out both;
+  
+        .dot-1,
+        .dot-2,
+        .dot-3 {
+          animation: dot 1s ease-in-out infinite;
+        }
+  
+        .dot-2 {
+          animation-delay: -0.4s;
+        }
+  
+        .dot-3 {
+          animation-delay: -0.2s;
+        }
+      }
+    }
+}
+  
+@keyframes line {
+    0% {
+      stroke-dashoffset: 1120;
+    }
+    100% {
+      stroke-dashoffset: 560;
+    }
+}
+  
+@keyframes spin {
+    0% {
+      transform: rotate(-90deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(270deg) translate3d(0, 0, 0);
+    }
+}
+  
+@keyframes microphone {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(0);
+    }
+}
+  
+@keyframes dots {
+    0%,
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+  
+@keyframes dot {
+    0%,
+    100% {
+      top: 5px;
+    }
+    50% {
+      top: -5px;
+    }
+}
+  

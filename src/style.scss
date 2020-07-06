@@ -1,0 +1,31 @@
+@import 'scss/vars';
+@import 'scss/header';
+@import 'scss/search';
+@import 'scss/movies';
+@import 'scss/mySwiper';
+@import 'scss/footer';
+@import 'scss/preloader';
+@import 'scss/microphone';
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    &:focus {
+        outline: none;
+    }
+}
+
+.swiper-slide {
+    background: transparent;
+}
+
